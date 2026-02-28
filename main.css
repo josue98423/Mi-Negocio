@@ -18,10 +18,15 @@ body {
 }
 
 header {
-    background: #111;
-    color: white;
+     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("image.png");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 60px 0;
+    color: white;
 }
 
 .about {
@@ -83,4 +88,5 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+
 }
