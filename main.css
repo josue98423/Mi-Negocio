@@ -50,6 +50,55 @@ header {
     color: white;
 }
 
+.header-flex{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.profile-container{
+    position:relative;
+    width:130px;
+    height:130px;
+    transition:0.4s;
+}
+
+.profile-pic{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid white;
+    transition:0.4s;
+}
+
+.profile-container::before{
+    content:"";
+    position:absolute;
+    top:-6px;
+    left:-6px;
+    right:-6px;
+    bottom:-6px;
+    border-radius:50%;
+    background:linear-gradient(45deg,#00f2ff,#0066ff,#00f2ff);
+    z-index:-1;
+    animation:brillo 4s linear infinite;
+}
+
+@keyframes brillo{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+.profile-container:hover .profile-pic{
+    transform:scale(1.1);
+    box-shadow:0 0 25px #00f2ff;
+}
+
 .about {
      text-align: center;
 }
@@ -115,4 +164,5 @@ footer {
     margin-top: 40px;
 
 }
+
 
